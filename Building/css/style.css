@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.btn {
+  background: -webkit-gradient(linear, left top, right top, from(#F6BD60), to(#E88952));
+  background: -o-linear-gradient(left, #F6BD60 0%, #E88952 100%);
+  background: linear-gradient(90deg, #F6BD60 0%, #E88952 100%);
+  -webkit-box-shadow: 0px 8px 18px rgba(242, 147, 81, 0.450503);
+          box-shadow: 0px 8px 18px rgba(242, 147, 81, 0.450503);
+  border-radius: 3px;
+  min-height: 44px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  padding: 0 27px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#E88952), to(#F6BD60));
+  background: -o-linear-gradient(left, #E88952 0%, #F6BD60 100%);
+  background: linear-gradient(90deg, #E88952 0%, #F6BD60 100%);
+}
+
+.btn_big {
+  min-height: 50px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn_blue {
+  background: -webkit-gradient(linear, left top, right top, from(#87AFF1), color-stop(100%, #6C80CB), to(#6C80CB));
+  background: -o-linear-gradient(left, #87AFF1 0%, #6C80CB 100%, #6C80CB 100%);
+  background: linear-gradient(90deg, #87AFF1 0%, #6C80CB 100%, #6C80CB 100%);
+  -webkit-box-shadow: 0px 12px 20px rgba(132, 170, 237, 0.454846);
+          box-shadow: 0px 12px 20px rgba(132, 170, 237, 0.454846);
+}
+
+/* Обнуляющий стиль */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol li,
+ul li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Gilroy";
+  color: #333;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 105px;
+}
+
+.header__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.header__column_center {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 225px;
+          flex: 0 0 225px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 40px;
+  margin: 0 -5px;
+}
+
+.header__list li {
+  padding: 0 5px;
+}
+
+.header__list li:hover {
+  text-decoration: underline;
+}
+
+.header__link {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__main {
+  font-weight: 700;
+  font-size: 52px;
+  color: #E1E1E1;
+  line-height: 80%;
+  border-right: 1px solid #89AFEF;
+  padding-right: 25px;
+  margin-right: 25px;
+}
+
+.logo__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 190px;
+          flex: 0 1 190px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #5D5D5D;
+}
+
+.contacts-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contacts-header__items {
+  padding: 0 28px 0 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+._no-webp .home-main{
+  background: #FAFAFB url("../img/homepage/mainblock/bg.jpg") top no-repeat; }
+
+.home-main {
+  padding-top: 162px;
+}
+
+.home-main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-main__body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 59.21053%;
+          flex: 0 1 59.21053%;
+}
+
+.home-main__title {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 51px;
+}
+
+.home-main__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40.78947%;
+          flex: 0 1 40.78947%;
+}
+
+/* -------------- */
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #333;
+  color: #fff;
+}
+
+/* -------------- */
+
+.container {
+  max-width: 1140px;
+  margin: 0px auto;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/* -------------- */
+
+.social {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.social__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 43px;
+          flex: 0 0 43px;
+  height: 43px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.social__item_w {
+  background: #2DD038 url("../img/icons/header/whatsapp-logo.svg") center no-repeat;
+  -webkit-box-shadow: 0px 8px 25px rgba(45, 208, 56, 0.497678);
+          box-shadow: 0px 8px 25px rgba(45, 208, 56, 0.497678);
+}
+
+.social__item_v {
+  background: #7B519D url("../img/icons/header/viber-logo.svg") center no-repeat;
+  -webkit-box-shadow: 0px 8px 25px rgba(123, 81, 157, 0.503797);
+          box-shadow: 0px 8px 25px rgba(123, 81, 157, 0.503797);
+}
+
+.social__item_t {
+  background: #5BBAF0 url("../img/icons/header/telegram.svg") center no-repeat;
+  -webkit-box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
+          box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__item:hover {
+  background-size: 15px;
+}
+
+.items-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.items-contacts__phone {
+  padding-left: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  background: url("../img/icons/header/call-answer.svg") left no-repeat;
+}
+
+.items-contacts__phone:hover {
+  text-decoration: underline;
+}
+
+.items-contacts__email {
+  padding-left: 25px;
+  color: #333;
+  font-size: 17px;
+  background: url("../img/icons/header/email.svg") left no-repeat;
+}
+
+.items-contacts__email:hover {
+  text-decoration: underline;
+}
+
+._webp .home-main{ background: #FAFAFB url(../img/homepage/mainblock/bg.webp) top no-repeat; }
